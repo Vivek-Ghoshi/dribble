@@ -355,7 +355,7 @@ html,body{
 
 .page-3{
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     /* background: burlywood; */
 }
 .page-3 .sign-upSection{
@@ -401,23 +401,31 @@ html,body{
     width: 100%;
     height: 40%;
     padding: 1rem 0;
-}
-.page-3 .scroller .imgs{
-    width: 100%;
-    height: 100%;
+    overflow-x: hidden;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    overflow-x: auto;
-    gap: 2rem;
+    justify-content: center;
+}
+.page-3 .scroller .imgs{
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    padding: 0.7rem;
+    animation-name: animatedImages;
+    animation-timing-function: linear;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+    animation-delay: 0;
+    margin-left: 4px;
 }
 .page-3 .scroller .imgs .img{
-    flex-shrink: 0;
     width: 12rem;
     height: 12rem;
+    margin-left: 12px;
     border-radius: 0.4rem;
-    overflow: hidden;
-   
+    display: inline-block;
+    
 }
 .page-3 .scroller .imgs .img img{
     width: 100%;
@@ -436,8 +444,79 @@ html,body{
 .page-3 .scroller .imgs::-webkit-scrollbar{
     display: none;
 }
+@keyframes animatedImages {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX( calc(-100% - 4px) );
+    }
+}
 .page-3 .footer{
     width: 100%;
-    height: 30%;
-    background: #ccb6b6;
+    height: 40%;
+    /* background: #ccb6b6; */
+}
+.page-3 .footer .top{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page-3 .footer .top .top-left{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page-3 .footer .top .top-left img{
+    width: 95%;
+    height: 65%;
+    object-fit: cover;
+}
+.page-3 .footer .top .top-center{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.page-3 .footer .top .top-center h2{
+    font-size: 1rem;
+    font-family: sans-serif, "Source Serif 4",'gilroy' Georgia, serif;
+    font-weight: 500;
+}
+.page-3 .footer .top .top-right{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding:  0 2rem;
+}
+.page-3 .footer .top .top-right i{
+    font-size: 1.5rem;
+}
+.page-3 .footer .bottom{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+}
+.page-3 .footer .bottom .left,.page-3 .footer .bottom .right{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: gray;
+}
+.page-3 .footer .bottom .left h2,.page-3 .footer .bottom .right h3{
+ font-size: 0.9rem;
+ font-weight: 500;
 }
