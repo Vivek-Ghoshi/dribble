@@ -425,7 +425,6 @@ html,body{
     margin-left: 12px;
     border-radius: 0.4rem;
     display: inline-block;
-    
 }
 .page-3 .scroller .imgs .img img{
     width: 100%;
@@ -519,4 +518,127 @@ html,body{
 .page-3 .footer .bottom .left h2,.page-3 .footer .bottom .right h3{
  font-size: 0.9rem;
  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    .nav {
+        height: 20vw;
+        padding: vw 3vw;
+    }
+    .nav-logo {
+        width: 25%;
+    }
+    .nav-left {
+        width: 55%;
+        gap: 2vw;
+        padding: 0;
+    }
+    .nav-left h3 {
+        display: none;
+
+    }
+    .nav-right {
+        width: 60%;
+        font-size: 1.2rem;
+        gap: 2vw;
+    }
+    .nav-right button:nth-child(2) {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+    }
+    .content > h1 {
+        font-size: 7vw;
+        line-height: 7vw;
+    }
+    .content > h4 {
+        margin-top: 5vw;
+        font-size: 3vw;
+    }
+    .content .search-bar {
+        display: none;
+    }
+    .content .items {
+        display: none;
+    }
+    .page-2 .categories {
+        width: 100%;
+        margin-top: 5vw;
+        margin-bottom: 5vw;
+        margin-left: 5%;
+        display: flex;
+        gap: 4vw;
+    }
+    .page-2 .categories span{
+        display: none;
+    }
+    .page-2 .categories .items{
+        width: 100%;
+    }
+    .page-2 .categories .items h3{
+        font-size: 2.3vw;
+        margin-left: 2vw;
+    }
+    .cards {
+        justify-content: center;
+        gap: 5vw;
+        padding: 5vw 5vw;
+    }
+    .cards .card {
+        max-width: 100vw;
+        max-height: 100vw;
+        width: 80vw;
+        height: 75vw;
+    }
+    .cards .card .overlay{
+        display: none;
+    }
+    .cards .card img,
+    .cards .card video {
+        height: auto;
+    }
+    .page-3 .sign-upSection {
+        flex-direction: column;
+        height: auto;
+        padding: 2vw 0;
+    }
+    .page-3 .scroller .imgs .img {
+        width: 12rem;
+        height: 8rem;
+        padding: 10px;
+    }
+    .page-3 .scroller .imgs .img h4{
+        display: none;
+    }
+    .page-3 .footer{
+        height: 10%;
+        padding-left: 2vw;
+    }
+    .page-3 .footer .top{
+        width: 100%;
+        height: 10%;
+        padding: 0 10vw;
+        justify-content: space-between;
+    }
+    .page-3 .footer .top .top-left{
+        width: 20vw;
+        height: 20vw;
+    }
+    .page-3 .footer .top .top-left img{
+        width: 40vw;
+        height: 20vw;
+        object-fit: cover;
+    }
+    .page-3 .footer .top .top-center{
+       display: none;
+    }
+
+    .page-3 .footer .top .top-right{
+        width: 40%;
+        height: 70%;
+        padding: 0;
+    }
+    .page-3 .footer .bottom .left h2,.page-3 .footer .bottom .right h3{
+         display: none;
+    }
+    
 }
